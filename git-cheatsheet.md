@@ -7,6 +7,7 @@
 - **git add <filename>** : add file to stage
 - **git commit -m "_commit name ex initial commit_"** : commit all staged files
 - **git log --oneline** : show the commit history
+- **q** : escape the oneline log
 - **git restore .** : return to last commited state
 - **git restore <filename>** restore individual files
 - **git remote add origin git@github.com:GitHubUsername/repository-name.git** : connecting local repo to a new repo (after creating the repo in github.com) AND
