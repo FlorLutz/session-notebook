@@ -5,7 +5,7 @@
 - **states that can be output** : untracked (not part of git), modified (changes dince last commit), staged (to be included in next commit), committed (changes saved in git)
 - **git add .** : add all files to repo
 - **git add <filename>** : add file to stage
-- **git commit -m "add foo"** : commit all staged files
+- **git commit -m "_commit name ex initial commit_"** : commit all staged files
 - **git log --oneline** : show the commit history
 - **git restore .** : return to last commited state
 - **git restore <filename>** restore individual files
