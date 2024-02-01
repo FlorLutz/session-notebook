@@ -10,8 +10,8 @@
 - **mkdir <foldername>** : create folder
 - **rmdir <foldername>** Delete folder
 - **rm -r <foldername>** Delete folder with all contents
-- **touch <filename>** create file
-- **mv <oldname> <newname>** move or rename a file
+- **touch <filename>** : create file
+- **mv <oldname> <newname>** : move or rename a file
 - **rm <filename>** : delete a file permanently (there is no trash bin to recover files!)
 - **open .** : open the current folder in the finder (for mac)
 - **curl <url>** : prints the received content from the specified url (try curl ipinfo.io)
