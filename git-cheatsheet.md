@@ -1,4 +1,6 @@
-# Git commands
+# GIT Stuff
+
+## Git commands
 
 - **git init** : make current folder a git repo (not inside another git-repo!)
 - **git status** : show status of repo
@@ -19,6 +21,19 @@
   or rename a file
 - **git push** : upload content
 - **git pull** : download content
+
+## GIT workflow
+
+1. create a new remote repo in github
+2. copy the git SSH url
+3. create a new folder (not in an existing GIT-folder) in shell using _mkdir_
+4. go to folder _cd foldername_ OR create and go there with _take foldername_
+5. init repo with _git init_
+6. link the local repo to the remote one with _git remote add origin git@github.com..._
+7. create files with _touch filename_
+8. start coding with _code ._
+9. _git add_, _git commit -m "initial commit"_, _git push -u origin main_
+   -> local and remote git are identical at this point
 
 ## branches
 
