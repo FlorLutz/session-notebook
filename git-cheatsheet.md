@@ -18,3 +18,23 @@
   or rename a file
 - **git push** : upload content
 - **git pull** : download content
+
+## branches
+
+- **git switch -c "feature-branch"** : open new side branch and go there
+- **git switch -** : go to main branch
+- **git branch** : shows all branches
+- **git branch -a** : list all branches - local and remote
+- **git branch -d "branchname"** : deletes a branch
+- **git push -u origin "branchname"** : pushes a particular branch, after used once, can be done again with **git push**
+- **git pull origin main** : pulls a main branch from GitHub (like after merging)
+
+## branches workflow
+
+1. create feature-branch
+2. make changes to files
+3. regularly commit
+4. push progress
+5. when finished with the purpose of the branch, make a pull request
+6. if every change approved, we can merge and delete the feature branch on GitHub
+7. pull the (updated) main branch to the local main
