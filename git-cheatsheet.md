@@ -20,7 +20,7 @@
 - **git push** : upload content
 - **git pull** : download content
 
-##branches
+## branches
 
 - **git switch -c "feature-branch"** : open new side branch and go there
 - **git switch -** : go to main branch
