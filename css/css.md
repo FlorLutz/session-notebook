@@ -1,6 +1,6 @@
 # CSS
 
-## positioning
+-## positioning
 
 - position: absolute - gives absolute position according to next relative parent
 - z-index - brings elements forward or backward, default is 0, 1 already makes it go in front of other elements
@@ -65,3 +65,23 @@ background-color: var(--primary-color);
 
 - link main css in html-header with `<link rel="stylesheet" href="style.css">`
 - link other css-files in the first lines of style.css with `@import "buttons.css"` or `@import "./foldername/buttons.css"`
+
+## flexbox
+
+- give parent/container - display: flex
+- global changes can be made to parent like flex-wrap, flex-direction, align-items, justify-content
+- or to individual items like self-align, flex-grow, flex-shrink
+- can be nested
+- good overview: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+## responsive CSS
+
+- add media queries at end of css for changes to really happen (cascading style)
+- `@media (min-width: 1200px) { *code* }`
+- do mobile first, then queries for bigger screens, dark mode etc.
+- breakpoints for responsive sites, min-width:
+- 600px - mobile
+- 900px - tablet
+- 1200px - desktop
+- 1536px - xl desktop
+- some ex. (prefers-color-scheme: dark), (prefers-color-scheme: light), (orientation: portrait), (orientation: landscape), @media screen, @media print, (min-width: 600px) and (orientation: landscape) - to combine use _and_
