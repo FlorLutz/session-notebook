@@ -2,12 +2,12 @@
 
 ## script in an html
 
-- write `<script></script>` in body and
+- write `<script></script>` in body and `<script src="script.js" defer></script>` in the head (defer executes it after page load)
 
 ## console tricks
 
-- use `/t` for a tab
-- use `n` for a new line
+- use `\t` for a tab
+- use `\n` for a new line
 - use `console.clear();` to clear console
 - view console in browser or in terminal/VS Code with writing node nameOfJS-file or VSCode: RUN-StartDebugging
 - to view the value of a variable, always write `console.log("variableName: ", variableName);` to know which variable is shown
