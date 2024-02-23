@@ -85,3 +85,32 @@ background-color: var(--primary-color);
 - 1200px - desktop
 - 1536px - xl desktop
 - some ex. (prefers-color-scheme: dark), (prefers-color-scheme: light), (orientation: portrait), (orientation: landscape), @media screen, @media print, (min-width: 600px) and (orientation: landscape) - to combine use _and_
+
+## grid
+
+- give parent/container - display: grid
+- global changes can be made to parent like grid-template-columns, grid-template-rows, grid-template-areas, align-items, justify-content
+- or to individual items like grid-area, grid-row, grid column
+
+-grid area - container:
+
+```
+grid-template-areas:
+  "a a b c"
+  "d d d c"
+  "e e e e";
+```
+
+-grid area - item:
+
+```
+.element-a {
+	grid-area: a;
+}
+.element-b {
+	grid-area: b;
+}
+...
+```
+
+- good resource: https://css-tricks.com/snippets/css/complete-guide-grid/
