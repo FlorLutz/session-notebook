@@ -39,3 +39,18 @@ const myArray = ["hi", "hello", "miau"];
 const result = myArray.filter((x) => x.length>3);
 console.log(result); // logs ["hello", "miau"]
 ```
+
+- **arr.includes("Harry")** - checks, if Harry is an element of arr
+- **arr.find(age=>age>30)** - returns first element that meets condition (as opposed to .filter which gives out all)
+- **arr.findIndex(age=>age>30)** - returns index of first element that meets condition
+- **arr.sort()** - returns the sorted array in alphanumerical order; **arr.sort(a, b) => a-b** in correct order and ...b-a in reverse order; make sure strings are toLowerCase before sorting (if not the sort does not work properly)
+- **arr.reverse()** - reverses order of array
+- **arr.slice()** creates copy to avoid mutation
+- **arr.some(element=>element.length>5)** gives true or false if any element meets condition
+- **arr.every(element=>element.length>5)** gives true or false if ALL elements meet condition
+- **arr.reduce()** gives out single value like a sum in arr.reduce((a,b)=>a+b)
+
+## Recent methods not mutating original
+
+- good alternatives instad of cpoying before with ".slice()" or ".map()"
+- start with "to", like ".toReduced()", ".toSpliced()", ...

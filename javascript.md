@@ -319,3 +319,20 @@ console.log(getElementsCount(arr)); //logs 8
 - we need to **import all components** in index.js: `import { Header } from "./components/Header/Header.js"`
 - we need to add type="modules" to the `<script type="module" src="./index.js"></script>` tag in the html and get rid of `defer`
 - do frequent commits at stable middle stages
+
+## Async methods
+
+-
+
+## fetch-requests
+
+- interaction with APIs
+- 'fetch' gets info from API, make sure to use it in async functions to be able to wait for the answer, ex.:
+
+```
+button.addEventListener("click", async ()=> {
+  const response = await fetch ("https://api.com");
+  const data = await response.json();
+
+})
+```
