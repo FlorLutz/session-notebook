@@ -322,17 +322,90 @@ console.log(getElementsCount(arr)); //logs 8
 
 ## Async methods
 
--
+- Asynchronous Code runs in the background. This is useful for tasks that can take a long time to complete, but don't need to block the main thread.
+- JavaScript is a single-threaded language, meaning that only one thing can happen at a time.
+- Blocking the main thread is bad because it prevents the user from interacting with the page because no other JavaScript code can be executed. Examples of asynchronous code include: network requests, file system access, animations and timers.
+- Promise is an object that represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. Most of the time it is returned by a function that performs an asynchronous operation.
+- The Promise object has the following properties and methods:
+  - state: the state of the Promise object, can be "pending", "resolved" or "rejected"
+  - result: the result of the asynchronous operation (you'll almost never need to access this directly)
+  - then(): a method that takes a callback function that will be called when the asynchronous operation is complete
+  - catch(): a method that takes a callback function that will be called when the asynchronous operation fails
+  - finally(): a method that takes a callback function that will be called when the asynchronous operation is complete, regardless of whether it was successful or not
 
 ## fetch-requests
 
 - interaction with APIs
-- 'fetch' gets info from API, make sure to use it in async functions to be able to wait for the answer, ex.:
+- 'fetch' gets info from API, make sure to use it in async functions to be able to wait for the answer and to include it , ex.:
 
 ```
 button.addEventListener("click", async ()=> {
+  try {
   const response = await fetch ("https://api.com");
   const data = await response.json();
-
+  // now we can use data for commands like console.log(data.results.firstName)
+  } catch (error) {
+    console.error(error)
+  }
 })
 ```
+
+## Modern Syntax
+
+- deconstructing **objects** will give out variables for each one of the mentioned keys, new variables can be introduced as well and will not change the original object, ex.:
+
+```
+const animal = {
+name: "frog",
+height: 0.2,
+}
+
+const { name, heigth = frogHeight, color="green" } = animal;
+console.log(name) // logs "frog"
+console.log(frogHeight) // logs 0.2; variable has been renamed
+console.log(color) // logs "green"; new variable introduced
+console.log(animal) // logs {name: "frog", height: 0.2}
+```
+
+- deconstructing **arrays** does the same as for object, ex.:
+
+```
+const animals = ["frog", "tiger", "lion"];
+const [ frog, , otherCat ] = animals; // empty slots skip value to not assign to a variable
+console.log(frog) // logs "frog"
+console.log(otherCar) // logs "lion"
+
+const newAnimals = [...animals, "dog", "sheep"]
+console.log(newAnimals) // logs ["frog", "tiger", "lion", "dog", "sheep"]
+```
+
+- optional chaining with `?`, only does an operation, if variable is defined, ex.:
+
+```
+const cats = ["cat1", "cat2"]
+const letters = dogs?.length //does not throw an error
+```
+
+- nullish coalescing with `??`, returns right hand if left hand is null or undefined, ex.:
+
+```
+console.log(ch)
+```
+
+## Testing
+
+- linters do static testing (just syntax, code is not run)
+- other tests are unit tests (isolated for individual functions), integration (tests whole code), end to end (e2e, complete tests of front and backend with a helper robot)
+- tests-files are named like this [originalFileName].test.js, so for index.js it will be index.test.js
+- export/import function you want to test in the test-file, then write the test function, ex.:
+
+```
+test("returns 'Hello Jane!' if called greet('Jane')", () => {
+const result = greet('Jane');
+expect(result).toBe("Hello Jane!")
+})
+```
+
+- first run should be made in a way to see if the test detects problems, like putting .toBe("Hi Jane!") -> will give out false, so we know it works
+- test driven development is good practice: first create tests to direct development and have clear goals (definition of done)
+- bug fixing should be preceded by a new test
